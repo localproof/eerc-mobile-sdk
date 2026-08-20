@@ -1,0 +1,9 @@
+node_modules/
+vendor/
+e2e/out/
+e2e/cache/
+e2e/node_modules/
+*.log
+.env
+.env.local
+*.key

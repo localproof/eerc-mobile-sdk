@@ -1,0 +1,42 @@
+{
+  "name": "@localproof/eerc-sdk",
+  "version": "0.1.0",
+  "description": "Pure-JS, React-Native-safe client for Avalanche's Encrypted ERC (eERC): keys, ElGamal + Poseidon crypto, circuit inputs, balance decryption, proof encoding.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localproof/eerc-mobile-sdk.git"
+  },
+  "keywords": [
+    "eerc",
+    "avalanche",
+    "zero-knowledge",
+    "react-native",
+    "confidential",
+    "groth16"
+  ],
+  "scripts": {
+    "setup": "git clone --depth 1 https://github.com/ava-labs/EncryptedERC.git vendor/eerc && cd e2e && forge build",
+    "e2e": "tsx scripts/e2e.mts",
+    "e2e:fuji": "RPC_URL=https://api.avax-test.network/ext/bc/C/rpc tsx scripts/e2e.mts"
+  },
+  "dependencies": {
+    "@zk-kit/baby-jubjub": "^1.0.3",
+    "@zk-kit/poseidon-cipher": "^0.3.2",
+    "poseidon-lite": "^0.3.0",
+    "@babel/runtime": "^8.0.0"
+  },
+  "devDependencies": {
+    "ethers": "^6.13.0",
+    "snarkjs": "^0.7.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
